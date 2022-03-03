@@ -26,6 +26,7 @@ def get_user_name_from_input():
 def get_password_from_input():
     """ Password needs to be at least 8 characters long with at least one number, one special character and one letter. """
     
+    message = "Password has successfully been updated"
     password = input("Type your password: ")
     numbers = re.compile('1 2 3 4 5 6 7 8 9 0')
     special_character = re.compile('@ _ ! # $ % ^ & * ( ) < > ? / \ | { } ~ :')
@@ -35,4 +36,4 @@ def get_password_from_input():
         print("Password not valid")
 
     else:
-        return "Password has successfully been updated"
+        return message
