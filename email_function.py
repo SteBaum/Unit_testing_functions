@@ -30,7 +30,7 @@ def get_password_from_input():
     numbers = re.compile('1 2 3 4 5 6 7 8 9 0')
     special_character = re.compile('@ _ ! # $ % ^ & * ( ) < > ? / \ | { } ~ :')
     letters = re.compile('a z e r t y u i o p q s d f g h j k l m w x c v b n A Z E R T Y U I O P Q S D F G H J K L M W X C V B N')
-    if (numbers.search(string) == None or special_character.search(string) == None or letters.search(string) == None
+    if (numbers.search(password) == None or special_character.search(password) == None or letters.search(password) == None
     or len(password) < 8):
         print("Password not valid")
 
