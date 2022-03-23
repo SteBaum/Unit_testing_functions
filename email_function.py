@@ -31,7 +31,7 @@ def get_password_from_input():
     password = input("Please enter a password: ")
     if (len(password) < 8 or re.search(str([0-9]), password) is None
     or re.search(str([a-z]), password) is None
-    or re.search(str(special_character), password) == None):
+    or re.search(str(special_character), password) is None):
             print("Your password is incorrect")
     else:
         return message
