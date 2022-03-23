@@ -24,7 +24,6 @@ def get_user_name_from_input():
         return user_name
 
 
-
 def get_password_from_input():
     """ Password needs to be at least 8 characters long with at least one number, one special character and one letter. """
     
@@ -37,7 +36,7 @@ def get_password_from_input():
         print("Password to short, 8 characters minimum")
     elif re.search(str(list(string.digits)), password) is None:
        print("At least one digit required")
-    elif re.search(list(string.ascii_letters), password) is None:
+    elif re.search(str(list(string.ascii_letters)), password) is None:
         print("At least one letter required")
     elif re.search(str(special_character), password) is None:
             print("At least one speacial character required")
