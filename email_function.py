@@ -27,7 +27,7 @@ def get_password_from_input():
     """ Password needs to be at least 8 characters long with at least one number, one special character and one letter. """
     
     message = "Password has successfully been updated"
-    special_character = ['@ ','_','!','#','$','%', '^', '&', '*', '(', ')', '<', '>', '?, '/', '\', '|','{','},'~',':']
+    special_character = ['@ ','_','!','#','$','%', '^', '&', '*', '(', ')', '<', '>', '?', '|','{','}','~',':']
     while True:
         password = input("Please enter a password: ")
         if len(password) < 8:
