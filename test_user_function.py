@@ -21,5 +21,5 @@ def test_username_with_user_input_correct(monkeypatch):
     assert get_user_name_from_input() == 'wigins'
 
 def test_password_with_user_input_correct(monkeypatch):
-    monkeypatch.setattr('sys.stdin', io.StringIO('Fake@password'))
-    assert get_password_from_input() == "At least one digit required"
+    monkeypatch.setattr('sys.stdin', io.StringIO('Fake@password57'))
+    assert get_password_from_input() == "Password has successfully been updated"
