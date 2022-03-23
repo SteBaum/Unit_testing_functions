@@ -27,13 +27,21 @@ def get_password_from_input():
     """ Password needs to be at least 8 characters long with at least one number, one special character and one letter. """
     
     message = "Password has successfully been updated"
-    password = input("Type your password: ")
-    numbers = re.compile('1 2 3 4 5 6 7 8 9 0')
-    special_character = re.compile('@ _ ! # $ % ^ & * ( ) < > ? / \ | { } ~ :')
-    letters = re.compile('a z e r t y u i o p q s d f g h j k l m w x c v b n A Z E R T Y U I O P Q S D F G H J K L M W X C V B N')
-    if (numbers.search(password) == None or special_character.search(password) == None or letters.search(password) == None
-    or len(password) < 8):
-        print("Password not valid")
-
-    else:
+    special_character = ['@ _ ! # $ % ^ & * ( ) < > ? / \ | { } ~ :']
+    while True:
+         password = input("Please enter a password: ")
+        if len(password) < 6:
+            print("Your password must be at least 6 characters.")
+        elif re.search('[0-9]',password) is None:
+            print("Your password must have at least 1 number")
+        elif re.search('[A-Z]',password) is None:
+            print("Your password must have at least 1 uppercase letter.")
+        elif re.search('special_character',password) is None:
+            print("Your password must have at least 1 special character ('@ _ ! # $ % ^ & * ( ) < > ? / \ | { } ~ :')")
         return message
+        break
+
+
+
+
+#numbers.search(password) == None or or letters.search(password) == None special_character.search(password) == None or
