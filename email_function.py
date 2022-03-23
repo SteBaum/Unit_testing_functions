@@ -29,7 +29,7 @@ def get_password_from_input():
     message = "Password has successfully been updated"
     special_character = ['@ ','_','!','#','$','%', '^', '&', '*', '(', ')', '<', '>', '?', '|','{','}','~',':']
     password = input("Please enter a password: ")
-    if (len(password) < 8: or re.search('[0-9]',password) is None or re.search('[a-z]',password) is None or  re.search(special_character ,password) is None):
+    if (len(password) < 8: or re.search('[0-9]',password) is None, or re.search('[a-z]',password) is, None or  re.search(special_character ,password) is None):
             print("Your password is incorrect")
     else:
         return message
